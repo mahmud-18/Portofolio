@@ -1,6 +1,6 @@
 export const PersonalInfo = {
   name: "MOHAMMAD",
-  title: "Frontend Developer, Data Administrator, Virtual Assistant",
+  title: "Frontend Developer & Data Administrator", // diperpendek
   description:
     "I work in data administration and build web projects on the side. My background across manufacturing, automotive, and hospitality taught me to care about accuracy and detail — the same mindset I bring into code.",
   longDescription:
@@ -14,7 +14,7 @@ export const PersonalInfo = {
   availableForWork: true,
   socialLinks: {
     github: "https://github.com/mahmud-18",
-    linkedin: "https://linkedin.com/en/mohammad-basalamah",
+    linkedin: "https://linkedin.com/in/mohammad-basalamah", // /en/ → /in/
   },
 };
 
@@ -100,7 +100,7 @@ export const projects = [
       "Swiper.js",
     ],
     imageSrc: "/images/cherizzle.png",
-    liveUrl: "#",
+    liveUrl: "",
     githubUrl: "https://github.com/mahmud-18/cherizzle",
     featured: false,
     accent: "#ff3d8b",
