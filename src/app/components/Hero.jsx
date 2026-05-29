@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { ArrowDown, Download, ExternalLink, Mail } from "lucide-react";
-import { PersonalInfo, SocialLinks } from "../data/content";
+import { heroRoles, PersonalInfo, SocialLinks } from "../data/content";
 
 // ── Brand icons (inline SVG — tidak bergantung versi lucide) ─────
 const GithubIcon = ({ size = 17 }) => (
@@ -97,15 +97,7 @@ const iconMap = { Github: GithubIcon, Linkedin: LinkedinIcon, Mail };
 
 // ── Main component ───────────────────────────────────────────────
 export default function Hero() {
-  const roles = [
-    PersonalInfo.title,
-    "Frontend Developer",
-    "UI Builder",
-    "Web Craftsman",
-    "Data Entry Specialist",
-    "Excel Expert",
-  ];
-  const typed = useTypewriter(roles);
+  const typed = useTypewriter(heroRoles);
 
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);

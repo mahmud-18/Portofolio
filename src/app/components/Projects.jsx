@@ -66,6 +66,12 @@ function ProjectCard({ project, index }) {
           <h3 className="text-2xl font-semibold text-white transition-colors duration-300 group-hover:text-cyan-300">
             {project.title}
           </h3>
+          {project.problem && (
+            <p className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm leading-6 text-slate-300">
+              <span className="font-semibold text-cyan-300">Problem:</span>{" "}
+              {project.problem}
+            </p>
+          )}
           <p className="text-sm leading-6 text-slate-300">
             {project.description}
           </p>
@@ -87,9 +93,9 @@ function ProjectCard({ project, index }) {
             <button
               type="button"
               disabled
-              className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white/40 cursor-not-allowed"
+              className="inline-flex cursor-not-allowed items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm font-semibold text-white/35"
             >
-              Live preview
+              {project.liveStatus || "In Development"}
               <ExternalLink size={14} />
             </button>
           ) : (

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { PersonalInfo } from "../data/content";
-import { Mail, Phone, MapPin, Download, ArrowUpRight } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function About() {
@@ -129,34 +129,6 @@ export default function About() {
                 </motion.p>
               ))}
             </div>
-
-            {/* CTA Button */}
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              viewport={{ once: true }}
-              className="pt-4"
-            >
-              <motion.a
-                href={PersonalInfo.cvUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="group inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/10 hover:from-cyan-500/30 hover:to-blue-500/20 border border-cyan-500/30 hover:border-cyan-500/60 rounded-xl backdrop-blur-sm transition-all duration-300 font-semibold text-white"
-              >
-                <Download
-                  size={18}
-                  className="group-hover:translate-y-0.5 transition-transform"
-                />
-                Download Resume
-                <ArrowUpRight
-                  size={16}
-                  className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
-                />
-              </motion.a>
-            </motion.div>
           </motion.div>
         </motion.div>
 
@@ -166,7 +138,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.3 }}
           viewport={{ once: true }}
-          className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8"
         >
           {[
             {
@@ -174,12 +146,6 @@ export default function About() {
               label: "Email",
               value: PersonalInfo.email,
               href: `mailto:${PersonalInfo.email}`,
-            },
-            {
-              icon: Phone,
-              label: "Phone",
-              value: PersonalInfo.phone,
-              href: `tel:${PersonalInfo.phone}`,
             },
             {
               icon: MapPin,
