@@ -1,18 +1,25 @@
 export const PersonalInfo = {
   name: "MOHAMMAD",
-  title: "Frontend Developer & Data Administrator",
-  // Hero tagline — updated to be specific
+
+  title: "Frontend Developer & Systems Builder",
+
   description:
-    "Frontend developer with a data background — I build things that are clean, structured, and actually useful.",
+    "Frontend developer with an operations background, building practical systems and web applications that solve real business problems.",
+
   longDescription:
-    "I'm a frontend developer based in Indonesia with a background that started in data administration and operations — not a bootcamp or a CS degree. That path taught me how real business data works, and why structure matters.\n\nBefore focusing on web development, I built an Excel-based application for production tracking and bookkeeping using Excel's built-in developer tools — automating reports that were previously done manually. That project pushed me toward building tools people actually use, which eventually led me to web development.\n\nOn the web side, I've worked on several projects independently: a full-stack wedding invitation site with RSVP functionality deployed on Vercel, an e-commerce frontend for a local store, and a top-up service platform currently in progress. Each one taught me something different — from animation and UI polish to deployment and database integration.\n\nI work mainly with Next.js, React, and Tailwind CSS. I care about clean UI, readable code, and shipping things that actually work. Still growing, but I've been building consistently — and that's what matters.",
+    "My background started in operations, reporting, and data administration before moving into software development. Working directly with production records, bookkeeping, inventory data, and operational workflows taught me how businesses actually function behind the scenes.\n\nOne of my earliest projects was building an Excel-based production tracking and bookkeeping system that replaced manual reporting processes. That experience introduced me to system design and sparked my interest in building digital solutions.\n\nToday, I develop modern web applications using Next.js, React, Tailwind CSS, and related technologies. Beyond creating user interfaces, I enjoy solving workflow problems, organizing information, and building tools that make work more efficient.\n\nI combine operational thinking with technical execution — focusing not only on how things look, but also on how they work and the value they provide.",
+
   email: "mfrk081@gmail.com",
-  // Phone removed from public display — keep here for internal use if needed
+
   location: "Ciamis, Indonesia",
+
   profileImage: "/images/profile.jpg",
+
   cvUrl:
     "https://drive.google.com/file/d/1CzkrQ1KI9x2-7Qux1iWEh-MsFgCsEaZO/view?usp=drive_link",
+
   availableForWork: true,
+
   socialLinks: {
     github: "https://github.com/mahmud-18",
     linkedin: "https://linkedin.com/in/mohammad-basalamah",
@@ -20,11 +27,11 @@ export const PersonalInfo = {
 };
 
 export const heroRoles = [
-  PersonalInfo.title,
   "Frontend Developer",
-  "UI Builder",
+  "Systems Builder",
+  "Problem Solver",
   "Next.js Developer",
-  "Data-Aware Builder",
+  "Operations-Minded Developer",
 ];
 
 export const SocialLinks = [
@@ -62,6 +69,8 @@ export const skillsWebDev = [
 ];
 
 export const skillsDataTools = [
+  { name: "Process Improvement", icon: "⚙️", category: "Operations" },
+  { name: "Workflow Design", icon: "🔄", category: "Operations" },
   { name: "Data Management", icon: "🗂️", category: "Operations" },
   { name: "Reporting", icon: "📊", category: "Operations" },
   { name: "Bookkeeping", icon: "🧾", category: "Finance" },
@@ -89,27 +98,63 @@ export const skills = [...skillsWebDev, ...skillsDataTools];
 
 export const projects = [
   {
+    id: 0,
+    title: "Production Tracking & Reporting System",
+
+    problem:
+      "Production records, inventory movement, and operational expenses were managed manually, causing fragmented reporting and slower decision making.",
+
+    description:
+      "Designed and implemented an Excel-based tracking system covering production input, output, inventory movement, and operational expenses. Centralized reporting workflows and improved visibility across multiple operational areas.",
+
+    tags: ["Excel", "Operations", "Reporting", "Process Improvement"],
+
+    imageSrc: "/images/reporting-system.png",
+
+    liveUrl: "",
+
+    githubUrl: "",
+
+    featured: true,
+
+    accent: "#22c55e",
+  },
+
+  {
     id: 1,
+
     title: "Wedding Invitation — Undangan",
-    // "problem" field: one sentence explaining the real-world problem solved
+
     problem:
       "Physical wedding invitations are slow to distribute, hard to update, and can't capture RSVPs in real time.",
+
     description:
-      "A full-stack interactive wedding invitation website. Built with Next.js, Tailwind CSS v4, Framer Motion, and Vercel Postgres. Features animated transitions, per-component backgrounds, and an RSVP form — all managed through a centralized content file.",
+      "A full-stack RSVP platform designed to simplify invitation distribution and guest attendance tracking. Built with Next.js, Tailwind CSS, Framer Motion, and Vercel Postgres, featuring dynamic invitation management and real-time RSVP collection.",
+
     tags: ["Next.js", "Tailwind CSS", "Framer Motion", "Vercel Postgres"],
+
     liveUrl: "https://undangannikahanfahmidanhaifa.vercel.app/",
+
     githubUrl: "https://github.com/mahmud-18/undangan",
+
     imageSrc: "/images/wedding.png",
+
     featured: true,
+
     accent: "#00c8ff",
   },
+
   {
     id: 2,
+
     title: "E-Commerce — Amberik Store",
+
     problem:
-      "Local stores lose potential customers by having no online presence or way to browse and purchase products digitally.",
+      "Local businesses lose potential customers by having no online presence or way to browse and purchase products digitally.",
+
     description:
-      "A full-stack e-commerce shopping website with product catalog and transaction flow. Built with Next.js and Tailwind CSS on the frontend, Prisma as the ORM for database management.",
+      "A full-stack e-commerce platform developed to help local businesses establish an online presence. Features product browsing, database integration, and a scalable transaction workflow.",
+
     tags: [
       "Next.js",
       "Tailwind CSS",
@@ -119,19 +164,28 @@ export const projects = [
       "Swiper.js",
       "Vercel Postgres",
     ],
+
     imageSrc: "/images/Amberik.png",
+
     liveUrl: "https://amberik.vercel.app/",
+
     githubUrl: "https://github.com/mahmud-18/amberikStore",
+
     featured: false,
+
     accent: "#7b5fff",
   },
+
   {
     id: 3,
+
     title: "Top-Up Service — Cherizzle",
-    problem:
-      "Game top-up platforms are often cluttered and untrustworthy — this aims to build a clean, focused UI for game credit purchases.",
+
+    problem: "Game top-up platforms are often cluttered and untrustworthy.",
+
     description:
-      "A game top-up service platform currently in development. Features a product catalog and transaction flow UI, with Next.js on the frontend and Prisma handling the backend database layer.",
+      "An in-progress digital top-up platform focused on creating a cleaner, more trustworthy purchasing experience through streamlined UI and scalable architecture.",
+
     tags: [
       "Next.js",
       "Tailwind CSS",
@@ -140,70 +194,108 @@ export const projects = [
       "Lucide React",
       "Swiper.js",
     ],
+
     imageSrc: "/images/cherizzle.png",
+
     liveUrl: "",
+
     liveStatus: "In Development",
+
     githubUrl: "https://github.com/mahmud-18/cherizzle",
+
     featured: false,
+
     accent: "#ff3d8b",
   },
 ];
-
 // ── Experience ────────────────────────────────────────────────────
 
 export const experience = [
   {
     id: 1,
-    year: "2024 – Present",
-    role: "Freelance Web Developer",
-    company: "Self-employed",
-    type: "Freelance",
-    description:
-      "Delivered 3 web projects independently, from UI design to full deployment on Vercel. Built a full-stack wedding invitation with live RSVP, an e-commerce store with database integration, and a top-up service platform. Managed the full development cycle solo across each project.",
-    skills: ["Next.js", "Tailwind CSS", "Framer Motion", "Prisma", "Vercel"],
-  },
-  {
-    id: 2,
+
     year: "Aug 2025 – Present",
+
     role: "QC & Data Administrator",
+
     company: "BWR RIB",
+
     type: "Full-time",
+
     description:
-      "Conducted quality checks on yarn and rib production outputs. Built a tracking system covering production input, output, and operational expenses, replacing a fully manual process and centralizing 3 core reporting areas for faster review.",
+      "Performed quality control across yarn and rib production while developing an internal tracking system for production activity, inventory flow, and operational expenses. Replaced manual reporting processes and centralized reporting into a single structured workflow.",
+
     skills: ["Microsoft Excel", "Data Management", "QC", "Reporting"],
   },
+
   {
-    id: 3,
+    id: 2,
+
     year: "Apr 2024 – Aug 2025",
+
     role: "Operations & Field Staff",
+
     company: "Dejavani Modifikasi",
+
     type: "Full-time",
+
     description:
-      "Coordinated daily field operations and on-site activities across the workshop. Maintained daily financial transaction records and income logs while handling direct customer interactions, keeping service delivery consistent across workshop activity.",
+      "Coordinated workshop operations, maintained financial records, monitored daily activity, and handled direct customer interaction while ensuring smooth service delivery.",
+
     skills: ["Operations", "Financial Records", "Customer Service"],
   },
+
   {
-    id: 4,
+    id: 3,
+
     year: "Feb 2023 – Mar 2024",
+
     role: "Data Administrator",
+
     company: "Jaya Jati",
+
     type: "Full-time",
+
     description:
-      "Managed product order data across quantities, specifications, and delivery schedules for multiple clients. Prepared daily and monthly bookkeeping reports, then coordinated directly with clients on order fulfillment and payment tracking to keep records consistent.",
+      "Managed order data, production specifications, delivery schedules, bookkeeping records, and client communication. Maintained data accuracy across operational and financial reporting processes.",
+
     skills: ["Data Entry", "Bookkeeping", "Client Coordination"],
   },
+
+  {
+    id: 4,
+
+    year: "2024 – Present",
+
+    role: "Freelance Web Developer",
+
+    company: "Self-employed",
+
+    type: "Freelance",
+
+    description:
+      "Designed, developed, and deployed multiple web applications independently, managing the entire lifecycle from planning and UI implementation to deployment and maintenance. Delivered solutions focused on usability, workflow efficiency, and business value.",
+
+    skills: ["Next.js", "Tailwind CSS", "Framer Motion", "Prisma", "Vercel"],
+  },
+
   {
     id: 5,
+
     year: "Jun 2022 – Dec 2022",
+
     role: "Front Desk Intern",
+
     company: "Hotel Sakinah",
+
     type: "Internship",
+
     description:
-      "Handled all front desk operations including guest check-in/check-out, complaint resolution, and cash transaction processing. Prepared daily revenue reports in accordance with hotel SOP throughout the 7-month internship.",
+      "Handled front desk operations, guest services, cash transactions, and daily reporting while following hospitality service standards.",
+
     skills: ["Hotel Management System", "Customer Handling", "Cash Reporting"],
   },
 ];
-
 export const contactForm = {
   title: "Send a message",
   intro: "Share a few details and I will reply by email.",
