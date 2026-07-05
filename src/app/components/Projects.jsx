@@ -54,7 +54,7 @@ function ProjectCard({ project, index }) {
         <div className="flex items-center justify-between gap-3">
           <div>
             <p className="text-xs uppercase tracking-[0.24em] text-cyan-400/80">
-              Next.js / Tailwind / Framer Motion
+              {project.tags[1] || "General"}
             </p>
           </div>
           <span className="rounded-full bg-white/5 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.24em] text-slate-300 border border-white/10">

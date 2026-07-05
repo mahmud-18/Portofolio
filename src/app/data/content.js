@@ -1,17 +1,19 @@
 export const PersonalInfo = {
   name: "MOHAMMAD",
 
-  title: "Frontend Developer & Systems Builder",
+  title: "Tech-Savvy Operations Specialist",
 
   description:
-    "Frontend developer with an operations background, building practical systems and web applications that solve real business problems.",
+    "Operations professional who bridges traditional workflows and digital tools. Built Excel tracking systems at a yarn manufacturer that cut reporting time by 60%, then digitized inventory for 200+ items at a vehicle workshop (85%→98% accuracy). Experienced across manufacturing, service, and distribution.",
 
   longDescription:
-    "My background started in operations, reporting, and data administration before moving into software development. Working directly with production records, bookkeeping, inventory data, and operational workflows taught me how businesses actually function behind the scenes.\n\nOne of my earliest projects was building an Excel-based production tracking and bookkeeping system that replaced manual reporting processes. That experience introduced me to system design and sparked my interest in building digital solutions.\n\nToday, I develop modern web applications using Next.js, React, Tailwind CSS, and related technologies. Beyond creating user interfaces, I enjoy solving workflow problems, organizing information, and building tools that make work more efficient.\n\nI combine operational thinking with technical execution — focusing not only on how things look, but also on how they work and the value they provide.",
+    "I specialize in organizing daily workflows, managing inventory data, and ensuring quality control. I enjoy building useful systems, like Excel tracking tools and inspection checklists, to help teams work faster and make fewer mistakes.\n\nThroughout my career, I've worked across manufacturing (yarn & rib production), vehicle modification & service, furniture manufacturing & distribution, and hospitality — giving me a well-rounded understanding of how different industries operate.\n\nI'm looking for an opportunity to bring my hands-on experience in process improvement and team coordination to a growing company.",
 
-  email: "mfrk081@gmail.com",
+  email: "mfrk018@gmail.com",
 
-  location: "Ciamis, Indonesia",
+  location: "Bandung, Indonesia",
+
+  languages: ["Indonesian (Native)", "English (Intermediate)"],
 
   profileImage: "/images/profile.jpg",
 
@@ -27,11 +29,21 @@ export const PersonalInfo = {
 };
 
 export const heroRoles = [
-  "Frontend Developer",
+  "Operations Specialist",
+  "QC & Data Administrator",
+  "Process Improvement",
+  "Inventory Management",
   "Systems Builder",
-  "Problem Solver",
-  "Next.js Developer",
-  "Operations-Minded Developer",
+];
+
+export const highlights = [
+  "98% Inventory Accuracy (up from 85%)",
+  "100% Order Accuracy across 50+ monthly transactions",
+  "4.8★ Customer Rating (Dejavani)",
+  "4.9★ Guest Satisfaction (Hotel Sakinah)",
+  "95% On-Time Delivery Rate",
+  "Built 3 Custom Tracking Systems (Excel & Digital)",
+  "Trained 3 Team Members on SOPs",
 ];
 
 export const SocialLinks = [
@@ -55,57 +67,67 @@ export const SocialLinks = [
 // ── Skills split into two groups ────────────────────────────────
 
 export const skillsWebDev = [
-  { name: "HTML & CSS", icon: "🌐", category: "Core" },
-  { name: "JavaScript", icon: "⚡", category: "Core" },
-  { name: "Responsive Design", icon: "📱", category: "Core" },
-  { name: "React.js", icon: "⚛️", category: "Framework" },
-  { name: "Next.js", icon: "▲", category: "Framework" },
-  { name: "Tailwind CSS", icon: "🎨", category: "Styling" },
-  { name: "Framer Motion", icon: "🎬", category: "Animation" },
-  { name: "Lucide React", icon: "✦", category: "UI Library" },
-  { name: "Prisma", icon: "🔷", category: "Backend" },
-  { name: "Git & GitHub", icon: "🐙", category: "Tools" },
-  { name: "Vercel", icon: "🚀", category: "Tools" },
+  { name: "Excel (Advanced)", icon: "📊", category: "Data" },
+  { name: "Pivot Tables", icon: "🔄", category: "Data" },
+  { name: "VLOOKUP", icon: "🔍", category: "Data" },
+  { name: "Data Visualization", icon: "📈", category: "Data" },
+  { name: "Microsoft Office", icon: "📎", category: "Tools" },
+  { name: "Google Workspace", icon: "📧", category: "Tools" },
+  { name: "Canva", icon: "🎨", category: "Tools" },
+  { name: "Basic Video Editing", icon: "🎬", category: "Tools" },
+  { name: "Hotel Management Systems", icon: "🏨", category: "Tools" },
 ];
 
 export const skillsDataTools = [
-  { name: "Process Improvement", icon: "⚙️", category: "Operations" },
-  { name: "Workflow Design", icon: "🔄", category: "Operations" },
-  { name: "Data Management", icon: "🗂️", category: "Operations" },
-  { name: "Reporting", icon: "📊", category: "Operations" },
-  { name: "Bookkeeping", icon: "🧾", category: "Finance" },
+  { name: "Process Optimization", icon: "⚙️", category: "Operations" },
+  { name: "Inventory Management", icon: "📦", category: "Operations" },
+  { name: "Vendor Negotiations", icon: "🤝", category: "Operations" },
   { name: "Quality Control", icon: "✅", category: "Operations" },
+  { name: "Project Coordination", icon: "📋", category: "Operations" },
+  { name: "Operations Scheduling", icon: "🗓️", category: "Operations" },
+  { name: "Compliance & Documentation", icon: "📝", category: "Operations" },
+  { name: "Expense Tracking & Admin Support", icon: "🧾", category: "Finance" },
+  { name: "Data Entry & Accuracy", icon: "🎯", category: "Finance" },
+  { name: "Data Preparation for Audit", icon: "💰", category: "Finance" },
+  { name: "Report Generation", icon: "📄", category: "Finance" },
+  { name: "Customer Communication", icon: "💬", category: "Interpersonal" },
+  { name: "Problem-Solving", icon: "🧩", category: "Interpersonal" },
+  { name: "Time Management", icon: "⏰", category: "Interpersonal" },
+  { name: "Cross-Functional Teamwork", icon: "👥", category: "Interpersonal" },
+  { name: "Stakeholder Coordination", icon: "🔗", category: "Interpersonal" },
+  { name: "Training & Mentoring", icon: "🎓", category: "Interpersonal" },
+  { name: "Attention to Detail", icon: "🔎", category: "Interpersonal" },
 ];
 
 export const skillGroups = [
   {
-    title: "Web Development",
+    title: "Data & Tools",
     description:
-      "Frontend stack and tools I use to build responsive web interfaces.",
+      "Software and tools I use for data management, reporting, and documentation.",
     skills: skillsWebDev,
   },
   {
-    title: "Data & Tools",
+    title: "Operations & Admin Support",
     description:
-      "Operational strengths from data, reporting, and quality workflows.",
+      "Core operational strengths from process improvement, quality control, and administrative management.",
     skills: skillsDataTools,
   },
 ];
 
 export const skills = [...skillsWebDev, ...skillsDataTools];
 
-// ── Projects ─────────────────────────────────────────────────────
+// ── Operations Projects (Primary) ────────────────────────────────
 
 export const projects = [
   {
     id: 0,
-    title: "Production Tracking & Reporting System",
+    title: "Excel Production Tracking System",
 
     problem:
       "Production records, inventory movement, and operational expenses were managed manually, causing fragmented reporting and slower decision making.",
 
     description:
-      "Designed and implemented an Excel-based tracking system covering production input, output, inventory movement, and operational expenses. Centralized reporting workflows and improved visibility across multiple operational areas.",
+      "Built an Excel tracking system to monitor production input, output, and expenses at BWR RIB, which made monthly reporting much faster and more accurate. Centralized reporting workflows and improved visibility across multiple operational areas.",
 
     tags: ["Excel", "Operations", "Reporting", "Process Improvement"],
 
@@ -122,6 +144,58 @@ export const projects = [
 
   {
     id: 1,
+
+    title: "Digital Inventory System — Dejavani",
+
+    problem:
+      "Spare parts inventory for over 200 items was tracked manually, leading to stock discrepancies and ordering errors.",
+
+    description:
+      "Created a digital inventory system for over 200 items and ran regular stock checks, improving order accuracy from 85% to 98%. Enabled better vendor coordination and improved operational efficiency.",
+
+    tags: ["Inventory Management", "Data Accuracy", "Operational Efficiency"],
+
+    liveUrl: "",
+
+    githubUrl: "",
+
+    imageSrc: "/images/reporting-system.png",
+
+    featured: true,
+
+    accent: "#f59e0b",
+  },
+
+  {
+    id: 2,
+
+    title: "QC Checklist & Handover System",
+
+    problem:
+      "Vehicle modification projects suffered from rework due to inconsistent quality checks before customer handover.",
+
+    description:
+      "Introduced a strict quality control checklist before handover at Dejavani Modifikasi, which eliminated rework and ensured every vehicle met customer expectations. Maintained a 4.8-star average customer rating.",
+
+    tags: ["Quality Control", "Process Improvement", "Customer Satisfaction"],
+
+    imageSrc: "/images/reporting-system.png",
+
+    liveUrl: "",
+
+    githubUrl: "",
+
+    featured: false,
+
+    accent: "#3b82f6",
+  },
+];
+
+// ── Technical Projects (Proof of Digital Tool-Building) ──────────
+
+export const techProjects = [
+  {
+    id: 0,
 
     title: "Wedding Invitation — Undangan",
 
@@ -145,7 +219,7 @@ export const projects = [
   },
 
   {
-    id: 2,
+    id: 1,
 
     title: "E-Commerce — Amberik Store",
 
@@ -177,7 +251,7 @@ export const projects = [
   },
 
   {
-    id: 3,
+    id: 2,
 
     title: "Top-Up Service — Cherizzle",
 
@@ -208,7 +282,8 @@ export const projects = [
     accent: "#ff3d8b",
   },
 ];
-// ── Experience ────────────────────────────────────────────────────
+
+// ── Experience (Operations & Administration only) ───────────────
 
 export const experience = [
   {
@@ -223,9 +298,15 @@ export const experience = [
     type: "Full-time",
 
     description:
-      "Performed quality control across yarn and rib production while developing an internal tracking system for production activity, inventory flow, and operational expenses. Replaced manual reporting processes and centralized reporting into a single structured workflow.",
+      "Performed daily quality checks on yarn and rib production, significantly minimizing material waste and ensuring all outputs met strict company standards before packaging. Built an Excel tracking system to centralize production input, output, and operational data, reducing manual reporting time and ensuring 100% data accuracy for the finance team's audit process. Maintained detailed inventory records for incoming and outgoing goods, ensuring zero discrepancies for the procurement team. Documented all supply purchases clearly to support the finance team with data preparation for audits.",
 
-    skills: ["Microsoft Excel", "Data Management", "QC", "Reporting"],
+    skills: [
+      "Quality Control",
+      "Excel (Advanced)",
+      "Inventory Management",
+      "Reporting",
+      "Data Preparation for Audit",
+    ],
   },
 
   {
@@ -240,9 +321,18 @@ export const experience = [
     type: "Full-time",
 
     description:
-      "Coordinated workshop operations, maintained financial records, monitored daily activity, and handled direct customer interaction while ensuring smooth service delivery.",
+      "Managed daily workshop operations including spare parts inventory, tool availability, and vendor coordination, streamlining procurement tracking to ensure zero stock-outs and improving operational efficiency. Created a digital inventory system for over 200 items and ran regular stock checks, improving order accuracy from 85% to 98%. Coordinated up to 5 vehicle modification projects simultaneously, ensuring on-time delivery. Introduced a strict quality control checklist before handover, eliminating rework and maintaining a 4.8-star average customer rating. Handled daily admin tasks including reporting, purchase orders, expense tracking, and filing. Trained 3 new team members on workshop safety, quality standards, and daily procedures.",
 
-    skills: ["Operations", "Financial Records", "Customer Service"],
+    skills: [
+      "Operations Management",
+      "Inventory Management",
+      "Vendor Coordination",
+      "Project Coordination",
+      "Quality Control",
+      "Customer Service",
+      "Training & Mentoring",
+      "Expense Tracking",
+    ],
   },
 
   {
@@ -257,30 +347,19 @@ export const experience = [
     type: "Full-time",
 
     description:
-      "Managed order data, production specifications, delivery schedules, bookkeeping records, and client communication. Maintained data accuracy across operational and financial reporting processes.",
+      "Managed end-to-end product order lifecycle: captured specifications, tracked quantities, coordinated delivery schedules, and ensured 100% order accuracy across 50+ monthly client transactions. Prepared daily and monthly operational reports for sales and operational data to support management planning and audits. Communicated directly with clients regarding delivery schedules, helping the company achieve a 95% on-time delivery rate.",
 
-    skills: ["Data Entry", "Bookkeeping", "Client Coordination"],
+    skills: [
+      "Data Entry & Accuracy",
+      "Expense Tracking",
+      "Client Coordination",
+      "Report Generation",
+      "Operations Scheduling",
+    ],
   },
 
   {
     id: 4,
-
-    year: "2024 – Present",
-
-    role: "Freelance Web Developer",
-
-    company: "Self-employed",
-
-    type: "Freelance",
-
-    description:
-      "Designed, developed, and deployed multiple web applications independently, managing the entire lifecycle from planning and UI implementation to deployment and maintenance. Delivered solutions focused on usability, workflow efficiency, and business value.",
-
-    skills: ["Next.js", "Tailwind CSS", "Framer Motion", "Prisma", "Vercel"],
-  },
-
-  {
-    id: 5,
 
     year: "Jun 2022 – Dec 2022",
 
@@ -291,11 +370,17 @@ export const experience = [
     type: "Internship",
 
     description:
-      "Handled front desk operations, guest services, cash transactions, and daily reporting while following hospitality service standards.",
+      "Managed daily front desk administration and guest services, resolving complaints politely and earning a 4.9-star satisfaction rating. Recorded daily operational data and shift reports with 100% accuracy, ensuring zero discrepancies for the management's end-of-day review.",
 
-    skills: ["Hotel Management System", "Customer Handling", "Cash Reporting"],
+    skills: [
+      "Hotel Management Systems",
+      "Customer Service",
+      "Cash Handling",
+      "Operational Reporting",
+    ],
   },
 ];
+
 export const contactForm = {
   title: "Send a message",
   intro: "Share a few details and I will reply by email.",
