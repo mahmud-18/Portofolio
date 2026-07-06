@@ -21,7 +21,7 @@ export const PersonalInfo = {
   profileImage: "/images/profile.jpg",
 
   cvUrl:
-    "https://drive.google.com/file/d/1CzkrQ1KI9x2-7Qux1iWEh-MsFgCsEaZO/view?usp=drive_link",
+    "https://drive.google.com/file/d/1S6Fahxk3nHsQScfgQY7ReIZHHQ-uiwHU/view?usp=sharing",
 
   availableForWork: true,
 

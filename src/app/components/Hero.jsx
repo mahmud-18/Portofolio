@@ -165,11 +165,19 @@ export default function Hero() {
       >
         {/* LEFT — teks */}
         <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left max-w-xl mx-auto lg:mx-0">
-          <motion.div variants={item} className="mb-6">
+          <motion.div
+            variants={item}
+            className="mb-6 flex flex-wrap gap-2 justify-center lg:justify-start"
+          >
             <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-xs text-white/60 font-medium tracking-wide">
               <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
               Available for work
             </span>
+            {PersonalInfo.remoteReady && (
+              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-emerald-500/20 bg-emerald-500/10 text-xs text-emerald-300 font-medium tracking-wide">
+                🌐 Open for Remote · {PersonalInfo.timezone}
+              </span>
+            )}
           </motion.div>
 
           <motion.h1
