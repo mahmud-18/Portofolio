@@ -102,7 +102,7 @@ export default function Contact() {
             Contact
           </span>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-white">
-            Let&apos;s build something together
+            Let&apos;s Connect with me!
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-sm sm:text-base text-slate-400">
             Reach out for work, collaboration, or just a quick hello. I&apos;m
@@ -186,7 +186,9 @@ export default function Contact() {
                     <a
                       key={link.name}
                       href={link.href}
-                      target={link.href.startsWith("http") ? "_blank" : undefined}
+                      target={
+                        link.href.startsWith("http") ? "_blank" : undefined
+                      }
                       rel={
                         link.href.startsWith("http") ? "noreferrer" : undefined
                       }
