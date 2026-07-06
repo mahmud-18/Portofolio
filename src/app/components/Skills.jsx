@@ -4,15 +4,16 @@ import { motion } from "framer-motion";
 import { skillGroups, skills } from "../data/content";
 
 const categoryConfig = {
-  Framework: "from-purple-500/20 to-purple-500/5 border-purple-500/30",
-  Core: "from-cyan-500/20 to-cyan-500/5 border-cyan-500/30",
-  Styling: "from-pink-500/20 to-pink-500/5 border-pink-500/30",
+  Data: "from-cyan-500/20 to-cyan-500/5 border-cyan-500/30",
   Tools: "from-blue-500/20 to-blue-500/5 border-blue-500/30",
-  Animation: "from-orange-500/20 to-orange-500/5 border-orange-500/30",
-  "UI Library": "from-emerald-500/20 to-emerald-500/5 border-emerald-500/30",
-  Backend: "from-sky-500/20 to-sky-500/5 border-sky-500/30",
   Operations: "from-amber-500/20 to-amber-500/5 border-amber-500/30",
-  Finance: "from-lime-500/20 to-lime-500/5 border-lime-500/30",
+  Admin: "from-purple-500/20 to-purple-500/5 border-purple-500/30",
+  Interpersonal: "from-pink-500/20 to-pink-500/5 border-pink-500/30",
+  Communication: "from-emerald-500/20 to-emerald-500/5 border-emerald-500/30",
+  "Project Mgmt": "from-orange-500/20 to-orange-500/5 border-orange-500/30",
+  Documentation: "from-sky-500/20 to-sky-500/5 border-sky-500/30",
+  Collaboration: "from-lime-500/20 to-lime-500/5 border-lime-500/30",
+  Workflow: "from-violet-500/20 to-violet-500/5 border-violet-500/30",
 };
 
 function SkillCard({ skill, index }) {
@@ -70,14 +71,14 @@ export default function Skills() {
           className="mb-14 text-center"
         >
           <span className="mb-3 inline-block text-xs font-mono uppercase tracking-widest text-cyan-400/80">
-            Technologies
+            Skills & Tools
           </span>
           <h2 className="mb-3 text-4xl font-black leading-tight tracking-tight sm:text-5xl md:text-6xl">
-            My Tech Stack
+            What I bring
           </h2>
           <p className="mx-auto max-w-2xl text-sm text-gray-400/80 sm:text-base">
-            Organized by the web stack I build with and the data workflows that
-            shaped how I think.
+            Operational, administrative, and remote collaboration skills backed
+            by hands-on experience across industries.
           </p>
         </motion.div>
 
@@ -125,7 +126,8 @@ export default function Skills() {
           className="mt-14 border-t border-white/10 pt-8 text-center"
         >
           <p className="text-sm text-gray-400/80">
-            {skills.length} technologies and tools, with room to keep growing.
+            {skills.length} skills across operations, administration, data, and
+            remote collaboration.
           </p>
         </motion.div>
       </div>

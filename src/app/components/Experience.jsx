@@ -72,8 +72,8 @@ export default function Experience() {
             Professional timeline
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-sm sm:text-base text-slate-400">
-            A selection of roles and freelance work that shaped the skills I
-            bring to every project.
+            Operations and administration roles across manufacturing, service,
+            and distribution industries.
           </p>
         </motion.div>
 

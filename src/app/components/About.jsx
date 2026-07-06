@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { PersonalInfo } from "../data/content";
-import { Mail, MapPin } from "lucide-react";
+import { PersonalInfo, highlights } from "../data/content";
+import { Mail, MapPin, Award, Globe } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function About() {
@@ -42,12 +42,13 @@ export default function About() {
             About
           </span>
           <h2 className="text-5xl sm:text-6xl md:text-7xl font-black leading-tight tracking-tight mb-4">
-            Creative developer
+            Streamlining operations
             <br />
-            building the future
+            building efficient systems
           </h2>
           <p className="text-base sm:text-lg text-gray-400/80 max-w-2xl">
-            From code to creativity, crafting digital experiences that inspire
+            From data to workflows, creating tools that make teams work faster
+            and smarter
           </p>
         </motion.div>
 
@@ -132,11 +133,42 @@ export default function About() {
           </motion.div>
         </motion.div>
 
-        {/* Contact Cards - Premium Glass */}
+        {/* Highlights Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="mb-8"
+        >
+          <div className="flex items-center gap-2 mb-5">
+            <Award size={18} className="text-cyan-400" />
+            <span className="text-xs font-mono uppercase tracking-widest text-cyan-400/80">
+              Key Achievements
+            </span>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {highlights.map((item, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, x: -10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 + idx * 0.06 }}
+                viewport={{ once: true }}
+                className="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/10"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 flex-shrink-0" />
+                <span className="text-sm text-gray-300">{item}</span>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Contact Cards - Premium Glass */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, delay: 0.4 }}
           viewport={{ once: true }}
           className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8"
         >
@@ -153,6 +185,13 @@ export default function About() {
               value: PersonalInfo.location,
               href: "#",
             },
+            {
+              icon: Globe,
+              label: "Languages",
+              value:
+                PersonalInfo.languages?.join(" · ") || "Indonesian (Native)",
+              href: "#",
+            },
           ].map((item, idx) => {
             const Icon = item.icon;
             return (
@@ -161,7 +200,7 @@ export default function About() {
                 href={item.href}
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 + idx * 0.1 }}
+                transition={{ duration: 0.6, delay: 0.5 + idx * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -5, scale: 1.02 }}
                 className="group relative p-6 bg-gradient-to-br from-cyan-500/20 via-cyan-500/5 to-transparent border border-cyan-500/30 hover:border-cyan-500/60 backdrop-blur-xl rounded-2xl transition-all duration-300 overflow-hidden"

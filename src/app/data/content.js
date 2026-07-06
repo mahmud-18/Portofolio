@@ -13,7 +13,10 @@ export const PersonalInfo = {
 
   location: "Bandung, Indonesia",
 
-  languages: ["Indonesian (Native)", "English (Intermediate)"],
+  languages: [
+    "Indonesian (Native)",
+    "English (Professional Working Proficiency)",
+  ],
 
   profileImage: "/images/profile.jpg",
 
@@ -21,6 +24,10 @@ export const PersonalInfo = {
     "https://drive.google.com/file/d/1CzkrQ1KI9x2-7Qux1iWEh-MsFgCsEaZO/view?usp=drive_link",
 
   availableForWork: true,
+
+  remoteReady: true,
+
+  timezone: "WIB (UTC+7)",
 
   socialLinks: {
     github: "https://github.com/mahmud-18",
@@ -64,9 +71,9 @@ export const SocialLinks = [
   },
 ];
 
-// ── Skills split into two groups ────────────────────────────────
+// ── Skills split into groups ────────────────────────────────────
 
-export const skillsWebDev = [
+export const skillsDataTools = [
   { name: "Excel (Advanced)", icon: "📊", category: "Data" },
   { name: "Pivot Tables", icon: "🔄", category: "Data" },
   { name: "VLOOKUP", icon: "🔍", category: "Data" },
@@ -78,18 +85,21 @@ export const skillsWebDev = [
   { name: "Hotel Management Systems", icon: "🏨", category: "Tools" },
 ];
 
-export const skillsDataTools = [
+export const skillsOperations = [
   { name: "Process Optimization", icon: "⚙️", category: "Operations" },
   { name: "Inventory Management", icon: "📦", category: "Operations" },
-  { name: "Vendor Negotiations", icon: "🤝", category: "Operations" },
+  { name: "Vendor Coordination", icon: "🤝", category: "Operations" },
   { name: "Quality Control", icon: "✅", category: "Operations" },
   { name: "Project Coordination", icon: "📋", category: "Operations" },
   { name: "Operations Scheduling", icon: "🗓️", category: "Operations" },
   { name: "Compliance & Documentation", icon: "📝", category: "Operations" },
-  { name: "Expense Tracking & Admin Support", icon: "🧾", category: "Finance" },
-  { name: "Data Entry & Accuracy", icon: "🎯", category: "Finance" },
-  { name: "Data Preparation for Audit", icon: "💰", category: "Finance" },
-  { name: "Report Generation", icon: "📄", category: "Finance" },
+  { name: "Expense Tracking & Admin Support", icon: "🧾", category: "Admin" },
+  { name: "Data Entry & Accuracy", icon: "🎯", category: "Admin" },
+  { name: "Data Preparation for Audit", icon: "💰", category: "Admin" },
+  { name: "Report Generation", icon: "📄", category: "Admin" },
+  { name: "Invoice Reconciliation", icon: "📑", category: "Admin" },
+  { name: "Petty Cash Management", icon: "💵", category: "Admin" },
+  { name: "Purchase Order Processing", icon: "📋", category: "Admin" },
   { name: "Customer Communication", icon: "💬", category: "Interpersonal" },
   { name: "Problem-Solving", icon: "🧩", category: "Interpersonal" },
   { name: "Time Management", icon: "⏰", category: "Interpersonal" },
@@ -99,35 +109,67 @@ export const skillsDataTools = [
   { name: "Attention to Detail", icon: "🔎", category: "Interpersonal" },
 ];
 
+export const skillsRemoteTools = [
+  { name: "Slack", icon: "💬", category: "Communication" },
+  { name: "Trello", icon: "📋", category: "Project Mgmt" },
+  { name: "Asana", icon: "📌", category: "Project Mgmt" },
+  { name: "Notion", icon: "📝", category: "Documentation" },
+  { name: "Google Workspace", icon: "📧", category: "Collaboration" },
+  { name: "Zoom / Google Meet", icon: "🎥", category: "Communication" },
+  { name: "Async Communication", icon: "⏳", category: "Workflow" },
+  { name: "Remote Team Coordination", icon: "🌐", category: "Workflow" },
+];
+
 export const skillGroups = [
   {
     title: "Data & Tools",
     description:
       "Software and tools I use for data management, reporting, and documentation.",
-    skills: skillsWebDev,
+    skills: skillsDataTools,
   },
   {
     title: "Operations & Admin Support",
     description:
       "Core operational strengths from process improvement, quality control, and administrative management.",
-    skills: skillsDataTools,
+    skills: skillsOperations,
+  },
+  {
+    title: "Remote & Collaboration Tools",
+    description:
+      "Tools and practices I use to stay productive, organized, and connected in remote work environments.",
+    skills: skillsRemoteTools,
   },
 ];
 
-export const skills = [...skillsWebDev, ...skillsDataTools];
+export const skills = [
+  ...skillsDataTools,
+  ...skillsOperations,
+  ...skillsRemoteTools,
+];
 
 // ── Operations Projects (Primary) ────────────────────────────────
 
 export const projects = [
   {
     id: 0,
-    title: "Excel Production Tracking System",
+    title: "Production Tracking System (Demo)",
 
     problem:
       "Production records, inventory movement, and operational expenses were managed manually, causing fragmented reporting and slower decision making.",
 
     description:
       "Built an Excel tracking system to monitor production input, output, and expenses at BWR RIB, which made monthly reporting much faster and more accurate. Centralized reporting workflows and improved visibility across multiple operational areas.",
+
+    demoNote:
+      "Demo version recreated with fictional data to showcase system design and features. Original system built for BWR RIB is confidential.",
+
+    features: [
+      "Automated calculations for production input vs output",
+      "Real-time expense tracking dashboard",
+      "Data validation to prevent entry errors",
+      "Monthly report generation with one click",
+      "Inventory movement log with audit trail",
+    ],
 
     tags: ["Excel", "Operations", "Reporting", "Process Improvement"],
 
@@ -145,7 +187,7 @@ export const projects = [
   {
     id: 1,
 
-    title: "Digital Inventory System — Dejavani",
+    title: "Inventory Management Dashboard (Demo)",
 
     problem:
       "Spare parts inventory for over 200 items was tracked manually, leading to stock discrepancies and ordering errors.",
@@ -153,13 +195,24 @@ export const projects = [
     description:
       "Created a digital inventory system for over 200 items and ran regular stock checks, improving order accuracy from 85% to 98%. Enabled better vendor coordination and improved operational efficiency.",
 
+    demoNote:
+      "Demo version recreated with fictional data to showcase system design and features. Original system built for Dejavani Modifikasi is confidential.",
+
+    features: [
+      "Stock level tracking with low-stock alerts",
+      "Reorder point calculations based on usage history",
+      "Supplier database with contact and pricing info",
+      "Monthly stock reconciliation reports",
+      "Barcode-ready item numbering system",
+    ],
+
     tags: ["Inventory Management", "Data Accuracy", "Operational Efficiency"],
+
+    imageSrc: "/images/reporting-system.png",
 
     liveUrl: "",
 
     githubUrl: "",
-
-    imageSrc: "/images/reporting-system.png",
 
     featured: true,
 
@@ -169,13 +222,24 @@ export const projects = [
   {
     id: 2,
 
-    title: "QC Checklist & Handover System",
+    title: "Quality Control Checklist Template (Demo)",
 
     problem:
       "Vehicle modification projects suffered from rework due to inconsistent quality checks before customer handover.",
 
     description:
       "Introduced a strict quality control checklist before handover at Dejavani Modifikasi, which eliminated rework and ensured every vehicle met customer expectations. Maintained a 4.8-star average customer rating.",
+
+    demoNote:
+      "Demo version recreated with fictional data to showcase system design and features. Original system built for Dejavani Modifikasi is confidential.",
+
+    features: [
+      "Step-by-step inspection checklist with pass/fail criteria",
+      "Photo documentation attachment per check point",
+      "Digital sign-off by technician and supervisor",
+      "Defect tracking with root cause categorization",
+      "Auto-generated handover report for customers",
+    ],
 
     tags: ["Quality Control", "Process Improvement", "Customer Satisfaction"],
 
@@ -188,98 +252,6 @@ export const projects = [
     featured: false,
 
     accent: "#3b82f6",
-  },
-];
-
-// ── Technical Projects (Proof of Digital Tool-Building) ──────────
-
-export const techProjects = [
-  {
-    id: 0,
-
-    title: "Wedding Invitation — Undangan",
-
-    problem:
-      "Physical wedding invitations are slow to distribute, hard to update, and can't capture RSVPs in real time.",
-
-    description:
-      "A full-stack RSVP platform designed to simplify invitation distribution and guest attendance tracking. Built with Next.js, Tailwind CSS, Framer Motion, and Vercel Postgres, featuring dynamic invitation management and real-time RSVP collection.",
-
-    tags: ["Next.js", "Tailwind CSS", "Framer Motion", "Vercel Postgres"],
-
-    liveUrl: "https://undangannikahanfahmidanhaifa.vercel.app/",
-
-    githubUrl: "https://github.com/mahmud-18/undangan",
-
-    imageSrc: "/images/wedding.png",
-
-    featured: true,
-
-    accent: "#00c8ff",
-  },
-
-  {
-    id: 1,
-
-    title: "E-Commerce — Amberik Store",
-
-    problem:
-      "Local businesses lose potential customers by having no online presence or way to browse and purchase products digitally.",
-
-    description:
-      "A full-stack e-commerce platform developed to help local businesses establish an online presence. Features product browsing, database integration, and a scalable transaction workflow.",
-
-    tags: [
-      "Next.js",
-      "Tailwind CSS",
-      "Prisma",
-      "Framer Motion",
-      "Lucide React",
-      "Swiper.js",
-      "Vercel Postgres",
-    ],
-
-    imageSrc: "/images/Amberik.png",
-
-    liveUrl: "https://amberik.vercel.app/",
-
-    githubUrl: "https://github.com/mahmud-18/amberikStore",
-
-    featured: false,
-
-    accent: "#7b5fff",
-  },
-
-  {
-    id: 2,
-
-    title: "Top-Up Service — Cherizzle",
-
-    problem: "Game top-up platforms are often cluttered and untrustworthy.",
-
-    description:
-      "An in-progress digital top-up platform focused on creating a cleaner, more trustworthy purchasing experience through streamlined UI and scalable architecture.",
-
-    tags: [
-      "Next.js",
-      "Tailwind CSS",
-      "Prisma",
-      "Framer Motion",
-      "Lucide React",
-      "Swiper.js",
-    ],
-
-    imageSrc: "/images/cherizzle.png",
-
-    liveUrl: "",
-
-    liveStatus: "In Development",
-
-    githubUrl: "https://github.com/mahmud-18/cherizzle",
-
-    featured: false,
-
-    accent: "#ff3d8b",
   },
 ];
 
@@ -398,7 +370,7 @@ export const contactForm = {
     },
     message: {
       label: "Message",
-      placeholder: "Tell me about your project",
+      placeholder: "Tell me about your project or opportunity",
       requiredMessage: "Please enter a message.",
     },
   },

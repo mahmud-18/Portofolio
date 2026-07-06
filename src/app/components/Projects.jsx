@@ -2,12 +2,10 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ExternalLink, GitBranch } from "lucide-react";
+import { CheckCircle, Shield } from "lucide-react";
 import { projects } from "../data/content";
 
-function ProjectCard({ project, index }) {
-  const liveDisabled = !project.liveUrl || project.liveUrl === "#";
-  const githubDisabled = !project.githubUrl || project.githubUrl === "#";
+function OpsProjectCard({ project, index }) {
   const imageSrc = project.imageSrc || "/images/project-fallback.jpg";
 
   return (
@@ -23,7 +21,7 @@ function ProjectCard({ project, index }) {
       className="group relative overflow-hidden rounded-4xl border border-white/10 bg-slate-950/80 shadow-2xl shadow-black/30"
     >
       <div className="relative overflow-hidden">
-        <div className="relative h-64 w-full">
+        <div className="relative h-56 w-full">
           <Image
             src={imageSrc}
             alt={`${project.title} preview`}
@@ -36,25 +34,19 @@ function ProjectCard({ project, index }) {
         <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/40 px-3 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-slate-100 backdrop-blur-md">
           {project.featured ? "Featured" : "Project"}
         </div>
-        <div className="absolute inset-x-0 bottom-0 px-6 pb-5">
-          <div className="flex flex-wrap gap-2">
-            {project.tags.slice(0, 3).map((tag) => (
-              <span
-                key={tag}
-                className="rounded-full bg-white/10 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.24em] text-slate-200"
-              >
-                {tag}
-              </span>
-            ))}
+        {project.demoNote && (
+          <div className="absolute right-5 top-5 inline-flex items-center gap-1.5 rounded-full border border-amber-500/20 bg-amber-500/10 px-3 py-2 text-xs font-semibold text-amber-300 backdrop-blur-md">
+            <Shield size={12} />
+            Demo
           </div>
-        </div>
+        )}
       </div>
 
       <div className="space-y-5 p-6">
         <div className="flex items-center justify-between gap-3">
           <div>
             <p className="text-xs uppercase tracking-[0.24em] text-cyan-400/80">
-              {project.tags[1] || "General"}
+              Internal Tool
             </p>
           </div>
           <span className="rounded-full bg-white/5 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.24em] text-slate-300 border border-white/10">
@@ -75,7 +67,34 @@ function ProjectCard({ project, index }) {
           <p className="text-sm leading-6 text-slate-300">
             {project.description}
           </p>
+          {project.demoNote && (
+            <p className="rounded-xl border border-amber-500/10 bg-amber-500/5 px-3 py-2 text-xs leading-5 text-amber-400/80 italic">
+              {project.demoNote}
+            </p>
+          )}
         </div>
+
+        {project.features && project.features.length > 0 && (
+          <div className="space-y-2">
+            <p className="text-xs uppercase tracking-[0.24em] text-cyan-400/60 font-semibold">
+              Key Features
+            </p>
+            <ul className="space-y-1.5">
+              {project.features.map((feature, fi) => (
+                <li
+                  key={fi}
+                  className="flex items-start gap-2 text-sm text-slate-300"
+                >
+                  <CheckCircle
+                    size={14}
+                    className="mt-0.5 flex-shrink-0 text-green-400"
+                  />
+                  <span>{feature}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         <div className="flex flex-wrap gap-2">
           {project.tags.map((tag) => (
@@ -88,48 +107,11 @@ function ProjectCard({ project, index }) {
           ))}
         </div>
 
-        <div className="flex flex-wrap gap-3 pt-1">
-          {liveDisabled ? (
-            <button
-              type="button"
-              disabled
-              className="inline-flex cursor-not-allowed items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm font-semibold text-white/35"
-            >
-              {project.liveStatus || "In Development"}
-              <ExternalLink size={14} />
-            </button>
-          ) : (
-            <a
-              href={project.liveUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-500/10 px-4 py-2 text-sm font-semibold text-cyan-200 hover:border-cyan-400 hover:bg-cyan-500/15 hover:text-white transition-all duration-200"
-            >
-              Live preview
-              <ExternalLink size={14} />
-            </a>
-          )}
-
-          {githubDisabled ? (
-            <button
-              type="button"
-              disabled
-              className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white/40 cursor-not-allowed"
-            >
-              GitHub
-              <GitBranch size={14} />
-            </button>
-          ) : (
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-900/70 px-4 py-2 text-sm font-semibold text-white/80 hover:border-slate-500 hover:bg-slate-900 hover:text-white transition-all duration-200"
-            >
-              GitHub
-              <GitBranch size={14} />
-            </a>
-          )}
+        <div className="pt-1">
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-slate-700 bg-slate-900/70 px-4 py-2 text-xs font-medium text-slate-400">
+            <Shield size={12} />
+            Internal system — demo available on request
+          </span>
         </div>
       </div>
     </motion.article>
@@ -144,29 +126,30 @@ export default function Projects() {
     >
       <div className="absolute inset-x-0 top-0 h-44 bg-linear-to-b from-cyan-500/10 to-transparent pointer-events-none" />
       <div className="max-w-7xl mx-auto relative z-10">
+        {/* Operations Projects Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="mb-12 text-center"
+          className="mb-16 text-center"
         >
           <span className="inline-block text-xs font-mono uppercase tracking-[0.35em] text-cyan-400/80 mb-3">
-            Projects
+            Operational Projects
           </span>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-white">
-            Selected UI work
+            Systems I built
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-sm sm:text-base text-slate-400">
-            A modern showcase of my web UI projects built with Next.js, Tailwind
-            CSS, and Framer Motion. Each card is designed to feel polished,
-            responsive, and interaction-ready.
+            Internal tracking and quality control systems I designed and
+            implemented. These are confidential — demo versions available on
+            request.
           </p>
         </motion.div>
 
-        <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3 mb-24">
           {projects.map((project, index) => (
-            <ProjectCard key={project.id} project={project} index={index} />
+            <OpsProjectCard key={project.id} project={project} index={index} />
           ))}
         </div>
 
@@ -183,15 +166,15 @@ export default function Projects() {
                 Project summary
               </p>
               <h3 className="mt-3 text-2xl font-semibold text-white">
-                Fast, modern UI layouts with clean interactions.
+                {projects.length} operational systems built to improve workflows
               </h3>
             </div>
             <div className="flex flex-wrap gap-3 text-sm text-slate-300">
               <span className="rounded-full bg-white/5 px-4 py-2 border border-white/10">
-                {projects.length} projects
+                {projects.length} systems
               </span>
               <span className="rounded-full bg-white/5 px-4 py-2 border border-white/10">
-                Next.js + Tailwind + Framer Motion
+                Excel · Checklists · Digital Tools
               </span>
             </div>
           </div>
